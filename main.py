@@ -11,11 +11,6 @@ ns_firstCall = True
 ns_node = '192.168.178.33:8080'
 
 class NodeStatus:
-    #node = '192.168.178.33:8080'
-    #node = 'nodes.nectar.iota.cafe'
-    #synced = False
-    #firstCall = True
-
     def get(self):
         global ns_synced, ns_firstCall, ns_node
         try:
@@ -46,7 +41,6 @@ if __name__ == '__main__':
     ns = NodeStatus()
     if len(sys.argv) > 1:
         ns_node = sys.argv[1]
-    ns_node = 'nodes.nectar.iota.cafe'
     while (True):
        time.sleep(1)
        s = ns.get()
