@@ -25,7 +25,7 @@ class NodeStatus:
                 ns_synced = self.tangleTime['synced']
                 timestamp = 1545730073
                 #dt_object = datetime.fromtimestamp(timestamp)
-                timestamp = int(self.tangleTime['time']/1000000000)
+                timestamp = int(self.tangleTime['CTT']/1000000000)
                 dt_object = datetime.fromtimestamp(timestamp)
                 return ns_node + ' : ' + str(dt_object) + '  ' + str(self.tangleTime['synced'])
             else:
